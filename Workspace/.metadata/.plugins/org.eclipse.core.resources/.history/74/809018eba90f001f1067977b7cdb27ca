@@ -1,0 +1,11 @@
+package pack1;
+
+public class DBDemo {
+	
+	public static void main(String[] args) {
+		
+		Class.forName("Com.mysql.cj.jdbc.Driver");
+		System.out.println("Driver Found");
+	}
+
+}

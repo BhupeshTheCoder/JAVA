@@ -1,0 +1,17 @@
+package programAlgorithm;
+
+import java.util.Scanner;
+
+public class CharStackMain {
+    public static void main(String[] args) {
+		int ch;
+		char data;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("\n Enter the Char Stack");
+		int size = sc.nextInt();
+		CharStack c = new CharStack();
+		
+	
+	
+	
+}

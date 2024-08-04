@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Simple_Interest {
+	
+	public float Si (int p, int r, int t) {
+		int s = ((p*r*t)/100);
+		return s;
+	}
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		System.out.println("Enter principle");
+		int p = s.nextInt();
+		
+		System.out.println("Enter rate");
+		int r = s.nextInt();
+		
+		System.out.println("Enter time");
+		int t = s.nextInt();
+	}
+
+}

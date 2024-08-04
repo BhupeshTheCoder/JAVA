@@ -1,0 +1,14 @@
+package Handling;
+
+import java.util.ArrayList;
+
+public class Array1 {
+
+	public static void main(String[] args) {
+		ArrayList l= new ArrayList();
+		l.add(10);
+		l.add("Madhav");
+		l.add(20);
+		l.add(null);
+	}
+}

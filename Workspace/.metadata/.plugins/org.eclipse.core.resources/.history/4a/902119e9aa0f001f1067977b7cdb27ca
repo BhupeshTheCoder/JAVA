@@ -1,0 +1,43 @@
+package pack1;
+
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.util.Scanner;
+
+public class DBDemo {
+	
+	public static void main(String[] args) throws ClassNotFoundException {
+		
+		Class.forName("Com.mysql.cj.jdbc.Driver");
+		System.out.println("Driver Found!!!");
+		
+		Connnection con = DriverManager.getConnection("jdbc:myql://192.168.100.80:3306/db","Bhupesh","dell");
+		System.out.println("Connection Established");
+		
+		PreparedStatement pstmt = con.prepareStatement("insert into employee values(?,?,?)");
+		
+		Scanner s = new Scanner(System.in);
+		
+		System.out.println("Enter Employee Id= ");
+		int id = s.nextInt();
+		System.out.println("Enter Employee Name= ");
+		String name = s.next();
+		System.out.println("Enter Employee Salary= ");
+		float Salary = s.nextFloat();
+		
+		pstmt.setInt(1, id);
+		pstmt.setString(2, name);
+		pstmt.setFloat(3, Salary);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

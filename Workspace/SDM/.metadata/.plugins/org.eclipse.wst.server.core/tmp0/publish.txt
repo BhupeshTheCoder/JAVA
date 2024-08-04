@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Tue Jul 30 10:49:37 IST 2024
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\DELL\\.m2\\repository\\org\\springframework\\spring-web\\5.3.4\\spring-web-5.3.4.jar=WEB-INF/lib/spring-web-5.3.4.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\DELL\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-el\\9.0.43\\tomcat-embed-el-9.0.43.jar=WEB-INF/lib/tomcat-embed-el-9.0.43.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\DELL\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-jasper\\9.0.43\\tomcat-embed-jasper-9.0.43.jar=WEB-INF/lib/tomcat-embed-jasper-9.0.43.jar

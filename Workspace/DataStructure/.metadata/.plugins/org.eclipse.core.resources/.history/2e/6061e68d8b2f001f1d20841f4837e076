@@ -1,0 +1,126 @@
+package programAlgorithm;
+
+import java.util.Scanner;
+
+public class AssignLinkList{
+	// TODO Auto-generated constructor stub
+    IntListNode head;
+    
+    public AssignLinkList() {
+    	head = null;
+    }
+
+	public void insertFirst(int d) {
+		IntListNode new_node = new IntListNode(d);
+		if(head == null) {
+			head = new_node;
+		}else {
+	        new_node.setNext(head);
+	        head = new_node;
+	        return;
+	    }
+	}
+	
+	public void insertLast(int d) {
+		IntListNode new_node = new IntListNode(d);
+		if(head == null) {
+			head = new_node;
+			return;
+		}
+		IntListNode itr = head;
+		while(itr.getNext()!=null) {
+			itr=itr.getNext();
+		}
+		itr.setNext(new_node);
+		return;
+	}
+	
+	private void deleteByAddress(IntListNode d) {
+		IntListNode ild = d.getNext().getNext();
+		d.setData(d.getNext().getData());
+		d.getNext().setNext(null);
+		d.setNext(ild);
+		return;
+	}
+	
+	public void deleteAltNode() {
+	    if(head == null) {
+	    	System.out.println("Lsit Is Emty");
+	    	return;
+	    }
+	    IntListNode itr = head;
+	    System.out.println("Deleted Alternate Node :");
+	    while(itr!=null) 
+	    	deleteByAddress(itr);
+	        if(itr.getNext()!= null)
+            itr = itr.getNext().getNext();  	
+	    else
+	    	itr = itr.getNext();
+ 	    System.out.println();
+	}
+	
+	public String toString() {
+		String str = new String(" ");
+		if(head == null) {
+			return "List is Empty";
+			
+		}
+		IntListNode itr = head;
+		str = "\n list";
+		while(itr != null) {
+			str = str +"->"+itr.getData();
+			itr = itr.getNext();
+			
+		}
+		return str;
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AssignLinkList as = new AssignLinkList();
+		Scanner sc = new Scanner(System.in);
+		int ch;
+		int data;
+		do {
+			System.out.println("1. Insert First");
+			System.out.println("2. Insert Last");
+			System.out.println("2. Delete Alternate Node");
+			System.out.println("3. Display");
+			System.out.println("4. Exit");
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println("Enter Your Choice: ");
+			ch=sc.nextInt();
+			switch (ch) {
+			case 1: 
+				System.out.println("Enter The values: ");
+				data = sc.nextInt();
+				as.insertFirst(data);
+				break;
+			case 2: 
+				System.out.println("Enter The values: ");
+				data = sc.nextInt();
+				as.insertLast(data);
+				break;
+			case 3: 
+				as.deleteAltNode();
+				break;
+			case 4: 
+				System.out.println(as);
+				break;
+			case 5: 
+				break;
+			default:
+				System.out.println("Enter Correct choice: ");
+			}	
+		} while (ch!=5);
+		
+
+	}
+
+}

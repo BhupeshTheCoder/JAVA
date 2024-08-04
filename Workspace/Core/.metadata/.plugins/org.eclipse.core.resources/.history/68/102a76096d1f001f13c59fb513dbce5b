@@ -1,0 +1,28 @@
+package first;
+
+public class Employee {
+	
+	private static int empNo;
+	private float salaray;
+	private static double totalSalary;
+	public Employee(float salaray) {
+		super();
+		this.salaray = salaray;
+	}
+	public static int getEmpNo() {
+		return empNo;
+	}
+	public float getSalaray() {
+		return salaray;
+	}
+	public static double getTotalSalary() {
+		return totalSalary;
+	}
+	@Override
+	public String toString() {
+		return "Employee [\n Total Employees: "+empNo + " salaray=" + salaray + "]";
+	}
+	
+	
+
+}

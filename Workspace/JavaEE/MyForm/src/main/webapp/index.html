@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+    function validateEmployee()
+    {
+        if(document.empForm.txtName.value=="")
+            {
+            alert("Please Enter Your Name");
+            return false;
+            }
+        if(document.empForm.txtPwd.value=="")
+        {
+        alert("Please Enter Your Password");
+        return false;
+        }
+        if((document.empForm.gender[0].checked==false)&&
+                (document.empForm.gender[1].checked==false))
+            {
+            alert("Please Select your Gender");
+            return false;
+            }
+        if(document.empForm.age.selectedIndex==0)
+            {
+            alert("Please Select Age Group");
+            return false;
+            }
+        if(document.empForm.terms.checked==false)
+            {
+            alert("Please Agree Terms and Conditions");
+            return false;
+            }
+        
+    }
+</script>
+<meta charset="ISO-8859-1">
+<title>Form</title>
+</head>
+<body>
+<h1>Employee Registration Form</h1>
+<hr>
+<form action="welcome.html" method="get" onsubmit="return validateEmployee();" name="empForm">
+<table border="1">
+<tr>
+<td>Enter Employee Name:</td>
+<td><input type="text" name="txtName"></td>
+</tr>
+<tr>
+<td>Enter Password: </td>
+<td><input type="password" name="txtPwd"></td>
+</tr>
+<tr>
+<td>Select Gender: </td>
+<td>
+Male <input type="radio" name="gender">
+Female <input type="radio" name="gender">
+</td>
+</tr>
+<tr>
+<td>Select Age Group:</td>
+<td>
+<select name="age">
+<option value="select" selected="selected">select</option>
+<option value="21-25">21-25</option>
+<option value="25-30">25-30</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>I accept terms and Conditions!!!</td>
+<td><input type="checkbox" name="terms"></td>
+</tr>
+<tr>
+<td><input type="reset" value="RESET"></td>
+<td><input type="submit" value="REGISTER" name="register"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

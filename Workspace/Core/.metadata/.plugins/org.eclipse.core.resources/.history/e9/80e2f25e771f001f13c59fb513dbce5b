@@ -1,0 +1,43 @@
+package first;
+
+public class Product {
+
+	private int pid,quantity;
+	private float price;
+	public Product() {}
+	public Product(int pid, int quantity, float price) {
+		super();
+		this.pid = pid;
+		this.quantity = quantity;
+		this.price = price;
+	}
+	public int getPid() {
+		return pid;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public float getPrice() {
+		return price;
+	}
+	@Override
+	public String toString() {
+		return "Product [pid=" + pid + ", quantity=" + quantity + ", price=" + price + "]";
+	}
+	public float getTotal() {
+		return price*quantity;
+	}
+	public void highestPrice(Product[] p) {
+		
+		float temp=0;
+		int k =0;
+		temp = p[0].getPrice();
+		for (int i = 1; i < p.length; i++) {
+			if(temp<p[i].getPrice())
+			temp =p[i].getPrice();
+			k=i;
+		}
+		System.out.println("Highest price: "+temp+"\n Pid: "+p[k].getPid());
+	}
+	
+}

@@ -1,0 +1,19 @@
+package Handling;
+
+import java.util.ArrayList;
+import java.util.iterator;
+
+public class Array1 {
+
+	public static void main(String[] args) {
+		ArrayList l= new ArrayList();
+		l.add(10);
+		l.add("Madhav");
+		l.add(20);
+		l.add(null);
+		//System.out.println(l);
+		for(object O:l) {
+			System.out.println(0);
+		}
+	}
+}

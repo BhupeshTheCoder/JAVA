@@ -1,0 +1,24 @@
+package programAlgorithm;
+
+import java.util.Scanner;
+
+public class MainIntStack {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int ch, data;
+		Scanner sc = new Scanner(System.in);
+		IntStack st = new IntStack();
+		
+		do {
+			System.out.println("\n 1. Push");
+			System.out.println("\n 2. Pop");
+			System.out.println("\n 3. Peek");
+			System.out.println("\n 4. Display");
+			System.out.println("\n 5. Exit");
+		} while (ch != 4);
+		
+
+	}
+
+}

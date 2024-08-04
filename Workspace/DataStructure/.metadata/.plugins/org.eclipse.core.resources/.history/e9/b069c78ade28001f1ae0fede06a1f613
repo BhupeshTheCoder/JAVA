@@ -1,0 +1,128 @@
+package programAlgorithm;
+
+import java.util.Scanner;
+
+public class LinkedList {
+	IntListNode head;
+	
+	public LinkedList() {
+		head = null;
+	}
+	
+	public void insertFirst(int d) {
+		IntListNode new_node = new IntListNode(d);
+		if(head == null) {
+			head = new_node;
+			return;
+		}
+	}
+	
+	public String toString() {
+		String str = new String(" ");
+		if(head == null) {
+			return "List is Empty";
+			
+		}
+		IntListNode itr = head;
+		str = "\n list";
+		while(itr != null) {
+			str = str +"->"+itr.getData();
+			itr = itr.getNext();
+			
+		}
+		return str;
+	}
+	
+	public void insertLast(int d) {
+		IntListNode new_node = new IntListNode(d);
+		if(head == null) {
+			head = new_node;
+			return;
+		}
+		IntListNode itr = head;
+		while(itr.getNext() != null)
+			itr = itr.getNext();
+		itr.setNext(new_node);
+		return;
+	}
+	public void insertByPos(int data , int pos) {
+		IntListNode new_node = new IntListNode(data);
+		if(head == null) {
+			head = new_node;
+			return;
+		}if(pos == 1) {
+			new_node.setNext(head);
+			head = new_node;
+			return;
+		}
+		IntListNode itr = head;
+		for(int i = 1; i<pos-1 && itr.getNext() != null; i++) {
+			itr = itr.getNext();
+		}
+		new_node.setNext(itr.getNext());
+		return;
+	}
+   public int deleteFirst() {
+	   int d = -9;
+	   IntListNode deletetable;
+	   if(head == null) {
+		   return d;
+	   }
+	   if(head.getNext() == null) {
+		   d = head.getData();
+		   head = null;
+		   return d;
+	   }
+	   deletetable = null;
+	   d = head.getData();
+	   head = head.getNext();
+	   deletetable = null;
+	   return d;
+	   
+   }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+public static void main(String[] args) { 
+	Scanner sc = new Scanner(System.in);
+	int ch;
+	
+	LinkedList obj = new LinkedList();
+	obj.insertFirst(100);
+	obj.insertFirst(500);
+	obj.insertFirst(1000);
+	System.out.println(obj);
+}
+}

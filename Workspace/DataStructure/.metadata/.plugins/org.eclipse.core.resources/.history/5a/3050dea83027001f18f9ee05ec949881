@@ -1,0 +1,14 @@
+package programAlgorithm;
+
+import java.util.Scanner;
+
+public class MainIntStack {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int ch, data;
+		scanner sc = new Scanner(System.in);
+
+	}
+
+}
