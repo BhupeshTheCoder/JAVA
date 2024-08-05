@@ -1,0 +1,21 @@
+packages two types:
+1. user-defined 
+2. built-in
+
+
+import java.util.*;
+
+			java	---root package
+			
+			
+			util 	lang   io	..... sub-packages
+	
+			Scanner.class		System.class		FileInputStream
+			ArrayList.class		String.class
+			
+			
+Containment:
+One object part of another another object is containment.
+"has-a" relationship
+Employee has a date of joining
+
